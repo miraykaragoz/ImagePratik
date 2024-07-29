@@ -1,0 +1,14 @@
+﻿@model ImageModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Index" method="post" enctype="multipart/form-data">
+    <div class="form-group"> 
+        <input type="hidden" value="ImgName" class="form-control" asp-for="ImgName"  />
+    </div>
+    <input type="file" name="Img" id="file" accept="image/png, image/jpeg" />
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
